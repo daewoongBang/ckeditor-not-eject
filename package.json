@@ -3,17 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.8.3",
+    "@babel/plugin-transform-react-jsx-self": "^7.8.3",
+    "@ckeditor/ckeditor5-basic-styles": "^17.0.0",
+    "@ckeditor/ckeditor5-dev-utils": "^12.0.9",
+    "@ckeditor/ckeditor5-editor-classic": "^17.0.0",
+    "@ckeditor/ckeditor5-essentials": "^17.0.0",
+    "@ckeditor/ckeditor5-paragraph": "^17.0.0",
+    "@ckeditor/ckeditor5-react": "^2.1.0",
+    "@ckeditor/ckeditor5-theme-lark": "^17.0.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "customize-cra": "^0.9.1",
+    "raw-loader": "3",
     "react": "^16.13.0",
+    "react-app-rewired": "^2.1.5",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
