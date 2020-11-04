@@ -2,12 +2,12 @@ const { override, addBabelPlugins, getBabelLoader } = require('customize-cra');
 
 const { styles } = require('@ckeditor/ckeditor5-dev-utils');
 
-const fileLoaderMatcher = function(rule) {
+const fileLoaderMatcher = function (rule) {
   return rule.loader && rule.loader.indexOf(`file-loader`) !== -1;
 };
 
 function addPlugin(config) {
-  config.module.rules[2].oneOf = [
+  config.module.rules[1].oneOf = [
     ...[
       /*---ckeditor5 webpack config start---*/
       {
@@ -20,7 +20,7 @@ function addPlugin(config) {
           {
             loader: 'style-loader',
             options: {
-              singleton: true
+              injectType: 'singletonStyleTag'
             }
           },
           {
@@ -41,7 +41,7 @@ function addPlugin(config) {
       }
       /*---ckeditor5 webpack config end---*/
     ],
-    ...config.module.rules[2].oneOf
+    ...config.module.rules[1].oneOf
   ];
 
   // file-loader exclude
